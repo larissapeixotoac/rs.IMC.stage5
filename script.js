@@ -16,7 +16,7 @@ btnClose.addEventListener('click', closeWindow)
 function calcImc(event) {
     event.preventDefault()
 
-    let wg = Number(weight.value)
+    let wg = Number(weight.value.replace(',', '.'))
     let hg = Number(height.value.replace(',', '.'))
 
 
