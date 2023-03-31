@@ -192,7 +192,7 @@ header {
 
 .IMC p {
     font-weight: bold;
-    font-size: clamp(1.6rem, 6vw, 3.2rem);
+    font-size: clamp(1.6rem, 5.5vw, 2.8rem);
     line-height: 4rem;
     
     color: #0C3440;
