@@ -17,7 +17,8 @@ function calcImc(event) {
     event.preventDefault()
 
     let wg = Number(weight.value)
-    let hg = Number(height.value)
+    let hg = Number(height.value.replace(',', '.'))
+
 
     if( wg + hg >= 1 ) {
         toggleClasses()
@@ -55,4 +56,3 @@ function closeWindow(event) {
 
     toggleClasses()
 }
-
