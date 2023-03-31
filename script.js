@@ -23,7 +23,7 @@ function calcImc(event) {
     if( wg + hg >= 1 ) {
         toggleClasses()
         
-        imc = (wg / (hg ** 2)).toFixed(0)
+        imc = (wg / (hg ** 2)).toFixed(1)
 
         document.querySelector('span').innerText = imc
         
