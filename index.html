@@ -10,49 +10,66 @@
     <title>Calculadora de IMC</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 
-    <script src="./script.js" defer></script> <!-- defer: serve para que o script seja lidod por último, inclusive o body. -->
+    <script src="./js/script2.js" type="module" defer></script> <!-- defer: serve para que o script seja lidod por último, inclusive o body. -->
 </head>
 <body>
-    <header class="hide">
-        <p>Digite somente números válidos</p>
-    </header>
+    <div class="alert-error">
+        Digite somente números válidos
+    </div>
  
-    <main class="card">
-        <div class="content">
+    <div class="container">
 
-            <h1>Cálculo de IMC</h1>
-
-            <form id="IMC-form">
-                <fieldset>
-                    <div class="fieldset-wrapper">
-                        <div class="input-wrapper">
-                            <label for="weight">Peso (kg)</label>
-                            <input type="text" id="weight">
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="height">Altura (m)</label>
-                            <input type="text" id="height">
-                        </div>
-                    </div>
-            
-                </fieldset>
-            
-            </form>
-            
-            <button class="form-button" form="IMC-form">Calcular IMC
-                <img src="assets/arrow-up-right.svg" alt="seta apontando para o lado direito.">
-            </button>
-        </div>    
+        <main class="card">       
         
-    </main>
-    
-    <div class="IMC">
-        <button class="close-IMCResult"><img src="assets/close.svg" alt="botão para fechar a janela"></button>
-        <p>Seu IMC é de <span>28</span></p>
+            <form>
+                <h1 class="title">Cálculo de IMC</h1>
+               
+                <div class="fieldset-wrapper">
+                    <div class="input-wrapper">
+                        <label for="weight">Peso (kg)</label>
+                        <input 
+                        type="text" 
+                        id="weight"
+                        placeholder="60">
 
-        <table>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="height">Altura (cm)</label>
+                        <input 
+                        type="text" 
+                        id="height"
+                        placeholder="165">
+                    </div>
+                </div>
+        
+                <button type="submit">
+                    Calcular IMC
+
+                    <img src="assets/arrow-up-right.svg" alt="seta apontando para o lado direito.">
+                     
+                </button>    
+                
+        
+            </form>
+        
+                 
+        </main>
+    </div>
+    
+    <div class="modal-wrapper">
+
+        <div class="modal card">
+            <h2 class="title">
+                <button class="close"><img src="assets/close.svg" alt="botão para fechar o popup"></button>
+                
+                Seu IMC é de <span>28</span>
+            </h2>
+        </div>
+
+        <!-- <table>
             <legend>Classificação do IMC</legend>
             
             <tr>
@@ -80,7 +97,7 @@
                 <td>Maior que 40,0</td>
                 <td>Obesidade Grau III ou Mórbida</td>
             </tr>
-        </table>
+        </table> -->
     </div>
 
 </body>

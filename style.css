@@ -164,10 +164,10 @@ header {
     flex-direction: column;
 
     position: absolute;
-    margin-top: min(29vh, 60%);
+    margin-top: 50%;
 
-    /* width: min(36.3rem, 80%);
-    height: 15.2rem; */
+    width: min(36.3rem, 80%);
+    height: 15.2rem;
 
     background-color: white;
 

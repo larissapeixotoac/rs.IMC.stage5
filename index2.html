@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora de IMC</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="./script.js" defer></script> <!-- defer: serve para que o script seja lidod por último, inclusive o body. -->
+</head>
+<body>
+    <header class="hide">
+        <p>Digite somente números válidos</p>
+    </header>
+ 
+    <main class="card">
+        <div class="content">
+
+            <h1>Cálculo de IMC</h1>
+
+            <form id="IMC-form">
+                <fieldset>
+                    <div class="fieldset-wrapper">
+                        <div class="input-wrapper">
+                            <label for="weight">Peso (kg)</label>
+                            <input type="text" id="weight">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="height">Altura (m)</label>
+                            <input type="text" id="height">
+                        </div>
+                    </div>
+            
+                </fieldset>
+            
+            </form>
+            
+            <button class="form-button" form="IMC-form">Calcular IMC
+                <img src="assets/arrow-up-right.svg" alt="seta apontando para o lado direito.">
+            </button>
+        </div>    
+        
+    </main>
+    
+    <div class="IMC">
+        <button class="close-IMCResult"><img src="assets/close.svg" alt="botão para fechar a janela"></button>
+        <p>Seu IMC é de <span>28</span></p>
+
+        <table>
+            <legend>Classificação do IMC</legend>
+            
+            <tr>
+               <td>Menos de 18,5</td>
+               <td>Peso baixo</td> 
+            </tr>
+
+            <tr class="color">
+                <td>Entre 18,5 a 24,9</td>
+                <td>Peso normal ou adequado</td>
+            </tr>
+            <tr>
+                <td>Entre 25,0 a 29,0</td>
+                <td>Sobrepeso</td>
+            </tr>
+            <tr class="color">
+                <td>Entre 30,0 a 34,9</td>
+                <td>Obesidade Grau I</td>
+            </tr>
+            <tr>
+                <td>Entre 35,0 e 39,0</td>
+                <td>Obesidade Grau II</td>
+            </tr>
+            <tr class="color">
+                <td>Maior que 40,0</td>
+                <td>Obesidade Grau III ou Mórbida</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
