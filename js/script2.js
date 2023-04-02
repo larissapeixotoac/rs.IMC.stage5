@@ -1,4 +1,5 @@
 import { AlertError }from './alert-error.js'
+import { Modal } from './modal.js'
 import { calculateIMC, notNumber } from './utils.js'
 
 const form = document.querySelector('form')
